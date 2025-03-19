@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="dutch">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erfbelasting NS</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fonts.css">
+  <script src="javascript.js">
+  </script>
+</head>
+<header>
+
+<h5>!!Dit is een schoolopdracht en geen echte belastingdienst site!!</h5>
+
+  <div class="headerStyling">
+    <img src="photos/logo-ns.svg" alt="Recommended Albums" edge="rounded" class="center">
+    <h1>belastingdienst</h1>
+
+  </div>
+</header>
+<body>
+<form>
+<!-- form 3 -->
+<div class="container">
+    <fieldset>
+      <legend>3 Gegevens van de verkrijgers</legend>
+
+      <small>
+        Heeft de overledene in het testament een executeur aangewezen om de erfenis af te handelen?
+        Dan moet de executeur aangifte doen voor alle personen en/of instellingen die iets krijgen uit de nalatenschap
+        (verkrijgers).
+        Lees de toelichting bij vraag 3a.
+      </small>
+
+      <!-- form 3a -->
+      <fieldset>
+        <input type="checkbox" name="isExecuteur" id="isExecuteur"> Ik ben executeur en doe aangifte voor alle
+        personen en/of instellingen die iets krijgen uit de nalatenschap (verkrijgers). <br>
+        <small>Geef aan voor hoeveel verkrijgers u
+        aangifte doet. Bent u zelf ook verkrijger? Tel uzelf dan ook mee. </small>
+        <input type="number" name="aantalVerkrijgers" id="aantalVerkrijgers" placeholder="Aantal verkrijgers">
+
+        <h3> is er geen executeur aanwezig? geef dan aan welke situatie voor u geld</h3>
+        <textarea name="situatie" id="situatie" cols="30" rows="10"></textarea>
+</fieldset>
+</form>
+</html>

@@ -1,19 +1,65 @@
+
 /* styles.css */
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'nssans', sans-serif;
+}
+
+:root {
+  /* dit zijn alle kleuren die de officiele website van NS ook gebruikt */
+  --blue-dark: rgb(0, 48, 130);
+  --blue-medium: rgb(0, 75, 160);
+  --blue-light: rgb(0, 99, 211);
+  --blue-very-light: rgb(224, 232, 242);
+  --blue-ultra-light: rgb(230, 242, 251);
+  --yellow-dark: rgb(255, 201, 23);
+  --yellow-medium: rgb(255, 181, 25);
+  --green-dark: rgb(0, 138, 57);
+  --purple-dark: rgb(108, 89, 177);
+  --red-dark: rgb(219, 0, 41);
+  --orange-dark: rgb(233, 109, 0);
+  --blue-deep: rgba(7, 7, 33, 1);
+  --blue-darker: rgba(31, 31, 55, 1);
+  --gray-dark: rgba(57, 57, 77, 1);
+  --gray-medium: rgba(106, 106, 122, 1);
+  --gray-light: rgba(156, 156, 169, 1);
+  --gray-lighter: rgba(205, 205, 211, 1);
+  --gray-ultra-light: rgba(230, 230, 242, 1);
+  --white: rgb(255, 255, 255);
+  --red-bright: rgb(236, 0, 69);
+  --orange-bright: rgb(254, 98, 0);
+  --teal-dark: rgb(0, 170, 137);
+  --teal-medium: rgb(0, 134, 112);
+  --gray-neutral: rgb(109, 110, 112);
+  --purple-bright: rgb(201, 0, 232);
+
+  /* Gradients */
+  --gradient-yellow-orange: linear-gradient(90deg, var(--yellow-dark), rgb(255, 218, 98));
+  --gradient-yellow-orange-diag: linear-gradient(135deg, var(--yellow-dark), rgb(255, 227, 138));
+  --gradient-yellow-fade: radial-gradient(circle, rgb(255, 215, 82) 0%, var(--yellow-dark) 100%);
+  --gradient-yellow-fade-reverse: linear-gradient(90deg, var(--yellow-dark) 1.7%, rgba(255, 201, 23, 0) 100%);
+  --gradient-blue-fade: linear-gradient(90deg, var(--blue-dark), rgba(0, 48, 130, 0) 100%);
+  --gradient-blue-medium: linear-gradient(90deg, rgb(0, 80, 168), rgb(0, 121, 211));
+  --gradient-blue-light: linear-gradient(90deg, rgb(148, 220, 246), var(--blue-ultra-light));
+  --gradient-blue-soft: linear-gradient(135deg, rgb(148, 220, 246), rgb(198, 237, 253));
+  --gradient-white-gray: radial-gradient(circle, rgb(244, 251, 249) 0%, rgb(219, 245, 240) 100%);
+  --gradient-darken: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+  --gradient-lighten: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+  --gradient-white-fade: linear-gradient(90deg, var(--white) 0%, rgba(255, 255, 255, 0) 100%);
+  --gradient-blue-strong: radial-gradient(circle, rgb(42, 128, 225) 0%, var(--blue-light) 100%);
 }
 
 
-:root {
-    /* dit zijn alle kleuren die de officiele website van NS ook gebruikt */
+/* @media (prefers-color-scheme: dark) {
+  :root {
     --blue-dark: rgb(0, 48, 130);
     --blue-medium: rgb(0, 75, 160);
     --blue-light: rgb(0, 99, 211);
     --blue-very-light: rgb(224, 232, 242);
     --blue-ultra-light: rgb(230, 242, 251);
-    --yellow-dark: rgb(255, 201, 23);
+    --yellow-dark: var(--gray-dark);
     --yellow-medium: rgb(255, 181, 25);
     --green-dark: rgb(0, 138, 57);
     --purple-dark: rgb(108, 89, 177);
@@ -25,98 +71,268 @@
     --gray-medium: rgba(106, 106, 122, 1);
     --gray-light: rgba(156, 156, 169, 1);
     --gray-lighter: rgba(205, 205, 211, 1);
-    --gray-ultra-light: rgba(230, 230, 242, 1);
+    --gray-ultra-light: black;
     --white: rgb(255, 255, 255);
     --red-bright: rgb(236, 0, 69);
     --orange-bright: rgb(254, 98, 0);
     --teal-dark: rgb(0, 170, 137);
     --teal-medium: rgb(0, 134, 112);
     --gray-neutral: rgb(109, 110, 112);
-    --purple-bright: rgb(201, 0, 232);
-  
-    /* Gradients */
-    --gradient-yellow-orange: linear-gradient(90deg, var(--yellow-dark), rgb(255, 218, 98));
+    --purple-bright: rgb(201, 0, 232); */
+
+/* Gradients */
+/* --gradient-yellow-orange: linear-gradient(90deg, var(--yellow-dark), rgb(255, 218, 98));
     --gradient-yellow-orange-diag: linear-gradient(135deg, var(--yellow-dark), rgb(255, 227, 138));
-    --gradient-yellow-fade: radial-gradient(circle, rgb(255, 215, 82) 0%, var(--yellow-dark) 100%);
-    --gradient-yellow-fade-reverse: linear-gradient(90deg, var(--yellow-dark) 1.7%, rgba(255, 201, 23, 0) 100%);
-    --gradient-blue-fade: linear-gradient(90deg, var(--blue-dark), rgba(0, 48, 130, 0) 100%);
-    --gradient-blue-medium: linear-gradient(90deg, rgb(0, 80, 168), rgb(0, 121, 211));
-    --gradient-blue-light: linear-gradient(90deg, rgb(148, 220, 246), var(--blue-ultra-light));
-    --gradient-blue-soft: linear-gradient(135deg, rgb(148, 220, 246), rgb(198, 237, 253));
-    --gradient-white-gray: radial-gradient(circle, rgb(244, 251, 249) 0%, rgb(219, 245, 240) 100%);
-    --gradient-darken: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
-    --gradient-lighten: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
-    --gradient-white-fade: linear-gradient(90deg, var(--white) 0%, rgba(255, 255, 255, 0) 100%);
-    --gradient-blue-strong: radial-gradient(circle, rgb(42, 128, 225) 0%, var(--blue-light) 100%);
+    --gradient-yellow-fade: radial-gradient(circle, rgb(255, 215, 82) 0%, var(--yellow-dark));
+  } }  */
+
+
+header {
+  size: 10vw;
+  background-color: var(--gray-ultra-light);
+  color: var(--blue-medium);
+  padding: none;
+  border: none;
+  background-image: var(--gray-ultra-light);
+}
+
+.headerStyling {
+  width: 30%;
+  /* Stel de breedte in naar wens */
+  max-width: 1200px;
+  /* Stel de maximale breedte in */
+  margin: 0px auto;
+  /* Maakt de container in het midden */
+  padding: 40px;
+  background-color: var(--yellow-dark);
+  /* Lichte achtergrondkleur voor de container */
+}
+
+body {
+  background-color: var(--gray-ultra-light);
+  color: var(--blue-dark);
+  font-family: 'nssans', sans-serif;
+
+}
+
+body2 {
+  margin: 5%;
+  padding: 5%;
+}
+
+/* input code van de NS website */
+input {
+  border: .0625rem solid var(--gray-lighter);
+  border-radius: .25rem;
+  transition: all .2scubic-bezier(.7, .27, .27, 1);
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue-medium);
+  margin-bottom: .5rem;
+  display: block;
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  appearance: none;
+  /* Verberg de standaard radio button */
+  width: 20px;
+  height: 20px;
+  border: .0625rem solid var(--gray-lighter);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  width: 10px;
+  /* Kleinere cirkel */
+  height: 10px;
+  background-color: var(--teal-dark);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@supports selector(:has(*)) {
+  /* Goede invoer - groen vinkje */
+  label:has(input:valid:not(:placeholder-shown))::after {
+      content: '';
+      display: inline-block;
+      width: 0.8em;
+      height: 0.8em;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322c55e'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      justify-self: end;
+      grid-row: 2;
+      grid-column: 2;
+      margin-right: 10px;
+      position: relative;
+      top: 12px;
+  }
+
+  /* Foute invoer - rood kruisje */
+  label:has(input:required:invalid:not(:placeholder-shown))::after {
+      content: '';
+      display: inline-block;
+      width: 0.8em;
+      height: 0.8em;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ef4444'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      justify-self: end;
+      grid-row: 2;
+      grid-column: 2;
+      margin-right: 10px;
+      position: relative;
+      top: 12px;
+      z-index: 10;
+  }
+
+  /* Rode tekst en rand voor ongeldige input */
+  input:required:invalid:not(:placeholder-shown) {
+      border: 2px solid var(--red-dark);
+      background-color: #fef2f2;
+      color: var(--red-dark);
+  }
+
+  /* Groene border voor geldige input */
+  /* input:valid:not(:placeholder-shown) {
+      border: 2px solid #22c55e;
+      background-color: #f0fdf4;
+      color: #22c55e;
+  } */
+
+  /* Rode kruis achter input veld dat verschijnt bij ongeldige input */
+  .form-group:has(input:required:invalid:not(:placeholder-shown))::after {
+      content: '✖';
+      color: var(--red-dark);
+      font-size: 1.2em;
+      position: absolute;
+      right: 10px;
+      top: 30px;
+      z-index: 5;
+  }
+
+  /* Asterisk voor verplichte velden */
+  label:has(+ input:required)::after {
+      content: ' *';
+      color: var(--red-dark);
+  }
+}
+
+/* Fallback voor browsers zonder :has() ondersteuning */
+@supports not selector(:has(*)) {
+  .required-field::after {
+      content: ' *';
+      color: var(--red-dark);
   }
   
-
-  header{
-    size: 10vw;
-    background-color: var(--gray-ultra-light);
-    color: var(--blue-medium);
-    padding: none;
-    border: none;
-    background-image: var(--gray-ultra-light);
+  input:required:invalid:not(:placeholder-shown) {
+      border: 2px solid var(--red-dark);
+      background-color: #fef2f2;
+      color: var(--red-dark);
   }
-
-  .headerStyling{
-    width: 30%;  /* Stel de breedte in naar wens */
-    max-width: 1200px;  /* Stel de maximale breedte in */
-    margin: 0px auto;  /* Maakt de container in het midden */
-    padding: 40px;
-    background-color: var(--yellow-dark);  /* Lichte achtergrondkleur voor de container */
-  }
-
-  body{
-    background-color: var(--yellow-dark);
-    color: var(--blue-dark);
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-  }
-
-  h1{
-    color: var(--blue-dark);
-    font-size: 2em;
-    text-align: center;
-  }
-
-  p{
-    color: var(--blue-dark);
-    font-size: 1.5em;
-    padding: 1vw;
-    margin: 1vw;
-  }
-
-  h2{
-    color: var(--blue-dark);
-    font-size: 1.5em;
-    padding: 1vw;
-    margin: 1vw;
-  }
-
-  :disabled{
-    background: hidden;
-  }
-
-
-  .container {
-
-    width: 80%;  /* Stel de breedte in naar wens */
-    max-width: 1200px;  /* Stel de maximale breedte in */
-    margin: 20px auto;  /* Maakt de container in het midden */
-    padding: 20px;
-    background-color: var(--gray-ultra-light);  /* Lichte achtergrondkleur voor de container */
-    border-radius: 8px;  /* Afgeronde hoeken */
-  }
-
   
+  input:valid:not(:placeholder-shown) {
+      border: 2px solid var(--green-dark);
+      background-color: #f0fdf4;
+      color: var(--green-dark);
+  }
+}
 
+/* code van de NS website */
+button {
+  background-color: var(--blue-light);
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 0 -.125rem 0 var(--blue-medium);
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  min-width: 7.5rem;
+  padding: .625rem 1.125rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .15sease-in-out;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: #3a76d8;
+}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+h1 {
+  color: var(--blue-dark);
+  font-size: 2em;
+  text-align: center;
+}
+
+/* p {
+  color: var(--blue-dark);
+  font-size: 1.5em;
+  padding: 1vw;
+  margin: 1vw;
+} */
+
+h2 {
+  color: var(--blue-dark);
+  font-size: 1.5em;
+  padding: 1vw;
+  margin: 1vw;
+}
+
+:disabled {
+  background: hidden;
+}
+
+
+.container {
+  width: 95%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--white);
+
+
+}
+
+
+
+
+
+h5 {
+  color: var(--blue-dark);
+  font-size: 1.5em;
+  padding: .5vw;
+  background-color: var(--red-bright);
+  text-align: center;
+}

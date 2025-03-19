@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="dutch">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erfbelasting NS</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fonts.css">
+  <script src="javascript.js">
+  </script>
+</head>
+<header>
+
+<h5>!!Dit is een schoolopdracht en geen echte belastingdienst site!!</h5>
+
+  <div class="headerStyling">
+    <img src="photos/logo-ns.svg" alt="Recommended Albums" edge="rounded" class="center">
+    <h1>belastingdienst</h1>
+
+  </div>
+</header>
+<body2>
+
+ <form>
+ <!-- form 2 -->
+ <div class="container">
+    <fieldset>
+      <legend>2 Gegevens gemachtige</legend>
+      <small>Vul de gegevens van de gemachtigde in. De gemachtigde is degene die namens 1 of meerdere personen en/of
+        instellingen aangifte doet.
+        Het invullen van een telefoonnummer of e-mailadres is niet verplicht, maar wel handig. Dan kunnen wij u
+        makkelijker vragen stellen of uitleg geven.</small>
+
+      <!-- form 2a -->
+      <fieldset>
+        <legend>Vul 1 van de 3 in: het burgerservicenummer of RSIN van de gemachtigde, het beconnummer van de adviseur of
+          het protocolnummer van de notaris.</legend>
+        <br><br>
+
+        <label for="burgerservicenummerGemachtige">Burgerservicenummer/ RSIN gemachtigde</label>
+        <input type="number" id="burgerservicenummerGemachtige" name="burgerservicenummerGemachtige"
+               placeholder="Burgerservicenummer/ RSIN gemachtigde" required pattern="\d{6,8}" >
+        <br><br>
+
+        <label for="Beconnummer">Beconnummer adviseur </label>
+        <input type="number" id="beconnummer" name="beconnummer" placeholder="Beconnummer adviseur"required pattern="\d{6}">
+        <br><br>
+
+        <label for="protocolnummer">Protocolnummer notaris </label>
+        <input type="text" id="protocolnummer" name="protocolnummer" placeholder="Protocolnummer"> Lees ook de
+        toelichting bij vraag 1d
+        <br><br>
+      </fieldset>
+
+      <!-- form 2b -->
+      <fieldset>
+
+        <label for="Naam">Voorletter(s), tussen- voegsel(s) en achternaam gemachtigde </label>
+        <input type="text" id="VoorletterGemachtigde" name="VoorletterGemachtigde" placeholder="Voorletter">
+        <input type="text" id="TussenvoegselGemachtigde" name="TussenvoegselGemachtigde" placeholder="Tussenvoegsel">
+        <input type="text" id="AchternaamGemachtigde" name="AchternaamGemachtigde" placeholder="Achternaam"> <br><br>
+
+        <label for="instellingsNaam">Naam instelling (bijvoorbeeld een notariskantoor) </label>
+        <input type="text" id="instellingsNaam" name="instellingsNaam" placeholder="Naam instelling"><br><br><br>
+
+        <tekst>Adres in Nederland</tekst>
+        <br><br>
+
+        <label for="straat">Straatnaam en huisnummer </label>
+        <input type="text" id="straat" name="straat" placeholder="Straatnaam">
+        <input type="text" id="huisnummer" name="huisnummer" placeholder="Huisnummer">
+        <br><br>
+
+        <label for="postcode">Postcode en plaats </label>
+        <input type="text" id="postcode" name="postcode" placeholder="Postcode">
+        <input type="text" id="plaats" name="plaats" placeholder="Plaats">
+        <br><br>
+
+        <label for="landcode">Landcode </label>
+        <input type="number" id="landcode" name="landcode" placeholder="Landcode">
+        <br><br>
+
+        <label for="telefoonnummer">Telefoonnummer </label>
+        <input type="number" id="telefoonnummer" name="telefoonnummer" placeholder="Telefoonnummer">
+        <br><br>
+
+        <label for="email">E-mailadres </label>
+        <input type="email" id="email" name="email" placeholder="E-mailadres">
+        <br><br>
+
+      </fieldset>
+  </div>
+
+  <a href="vragenlijst3.html.html"><button>Ga verder</button></a>
+</form>
+</body2>
+</html>
