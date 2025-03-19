@@ -68,15 +68,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const inputFields = document.querySelectorAll("input");
+    // Selecteer alle inputvelden
+    const inputFields = document.querySelectorAll("input");
 
-  inputFields.forEach((inputField) => {
-      if (localStorage.getItem(inputField.id)) {
-          inputField.value = localStorage.getItem(inputField.id);
-      }
-      inputField.addEventListener("input", () => {
-          localStorage.setItem(inputField.id, inputField.value);
-      });
-  });
+    inputFields.forEach((inputField) => {
+        // Verschillende behandeling op basis van het type inputveld
+        const fieldId = inputField.id;
+        
+        // Eerst de waarden uit localStorage halen en toewijzen
+        if (localStorage.getItem(fieldId) !== null) {
+            if (inputField.type === "radio") {
+                // Voor radiobuttons, controleer of de waarde overeenkomt
+                inputField.checked = (localStorage.getItem(fieldId) === inputField.value);
+            } else if (inputField.type === "date") {
+                // Voor datumvelden gewoon de waarde toewijzen
+                inputField.value = localStorage.getItem(fieldId);
+            } else {
+                // Voor normale tekstvelden, e-mail, enz.
+                inputField.value = localStorage.getItem(fieldId);
+            }
+        }
+        
+        // Event listeners toevoegen voor het opslaan van waarden
+        if (inputField.type === "radio") {
+            // Voor radiobuttons luisteren naar het change event
+            inputField.addEventListener("change", () => {
+                if (inputField.checked) {
+                    localStorage.setItem(fieldId, inputField.value);
+                }
+            });
+        } else {
+            // Voor andere velden luisteren naar het input event
+            inputField.addEventListener("input", () => {
+                localStorage.setItem(fieldId, inputField.value);
+            });
+        }
+    });
 });
-

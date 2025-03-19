@@ -15,7 +15,7 @@
 <h5>!!Dit is een schoolopdracht en geen echte belastingdienst site!!</h5>
 
   <div class="headerStyling">
-    <img src="photos/logo-ns.svg" alt="Recommended Albums" edge="rounded" class="center">
+    <img src="photos/logo-ns.svg" alt="Recommended Albums" class="center">
     <h1>belastingdienst</h1>
 
   </div>
@@ -23,7 +23,7 @@
 <body>
 <h1>Welkom bij de Vragenlijst</h1>
 <h3>vul hier de gegevens in van de overledene</h3>
-<form>
+<form action="vragenlijst2.html">
 
   <!-- form 1a -->
   <div class="container">
@@ -32,6 +32,7 @@
       <small>Vul hier de gegevens van de overledene in.</small>
       <br><br>
       <fieldset>
+      <legend>Persoonsgegevens</legend>
         <label for="Voorletter">Voorletter(s) 
         </label>
         <input type="text" id="Voorletter" name="Voorletter" placeholder="Voorletter"  required>
@@ -46,7 +47,8 @@
         <br><br>
 
         <label for="Burgerservicenummer">Burgerservicenummer overledene </label>
-        <input type="text" id="Burgerservicenummer" name="Burgerservicenummer" placeholder="Burgerservicenummer" required pattern="\d{8,9}">
+        <input type="text" id="Burgerservicenummer" name="Burgerservicenummer" placeholder="12345678" required pattern="\d{8,9}"> <br>
+        <small>Het burgerservicenummer moet 8 of 9 cijfers bevatten.</small>
 
 
         <label for="Overlijdensdatum">Overlijdensdatum </label>
@@ -56,6 +58,7 @@
 
       <!-- form 1b -->
       <fieldset>
+        <legend>Familiegegevens</legend>
         <label for="Getrouwd">Was de overledene getrouwd of had de overledene een geregistreerd partner op het moment
           van overlijden? </label>
         <input type="radio" id="welGetrouwd" name="Getrouwd" value="Ja"> Ja
@@ -83,6 +86,7 @@
 
       <!-- form 1c -->
       <fieldset>
+        <legend>Kinderen</legend>
         <label for="kinderen">Had de overledene kinderen? </label>
         <input type="radio" id="welKinderen" name="Kinderen" value="Ja"> Ja
         <input type="radio" id="geenKinderen" name="Kinderen" value="nee"> Nee. Ga verder met vraag 1d.
@@ -102,7 +106,7 @@
       <!-- form 1d -->
 
       <fieldset>
-
+        <legend>Testament</legend>
         <label for="testament">Had de overledene een testament? </label>
         <input type="radio" id="welTestament" name="testament" value="Ja"> Ja. Vul de gegevens van de notatis die het
         testament heeft opgemaakt en de datum van het testament.
@@ -135,14 +139,12 @@
       </fieldset>
     </fieldset>
   </div>
-  <a href="vragenlijst2.html.html"><button>Ga verder</button></a>
+
+  <button>Ga verder</button>
 
 
 </form>
 </body>
 
 </html>
-
-<script>
-display none iets
-</script>
+ 
