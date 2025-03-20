@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="dutch" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erfbelasting NS</title>
+  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fonts.css">
+  <script src="javascript.js">
+  </script>
+
+<script>
+  // Verwijder de 'no-js' klasse en voeg 'js' klasse toe
+  document.documentElement.classList.remove('no-js');
+  document.documentElement.classList.add('js');
+</script>
+
+
+</head>
+<header>
+
+<h5>!!Dit is een schoolopdracht en geen echte belastingdienst site!!</h5>
+
+  <div class="headerStyling">
+    <img src="photos/logo-ns.svg" alt="Recommended Albums" class="center">
+    <h1>belastingdienst</h1>
+
+  </div>
+</header>
+<body>
+  <div class="no-js-content">
+<h1>Welkom bij de Vragenlijst</h1>
+<h3>vul hier de gegevens in van de overledene</h3>
+<form action="vragenlijst2.html">
+
+  <!-- form 1a -->
+  <div class="container">
+    <fieldset>
+      <legend>1 Gegevens van de overledene</legend>
+      <small>Vul hier de gegevens van de overledene in.</small>
+      <br><br>
+      <fieldset>
+      <legend>Persoonsgegevens</legend>
+        <label for="Voorletter">Voorletter(s) 
+        </label>
+        <input type="text" id="Voorletter-nojs" name="Voorletter" placeholder="Voorletter"  required>
+
+
+        <label for="Tussenvoegsel">Tussenvoegsel</label>
+        <input type="text" id="Tussenvoegsel-nojs" name="Tussenvoegsel" placeholder="Tussenvoegsel">
+
+
+        <label for="Achternaam">Achternaam </label>
+        <input type="text" id="Achternaam-nojs" name="Achternaam" placeholder="Achternaam" required>
+        <br><br>
+
+        <label for="Burgerservicenummer">Burgerservicenummer overledene </label>
+        <input type="text" id="Burgerservicenummer-nojs" name="Burgerservicenummer" placeholder="12345678" required pattern="\d{8,9}"> <br>
+        <small>Het burgerservicenummer moet 8 of 9 cijfers bevatten.</small>
+
+
+        <label for="Overlijdensdatum">Overlijdensdatum </label>
+        <input type="date" id="Overlijdensdatum-nojs" name="Overlijdensdatum" required><br><br>
+
+      </fieldset> 
+
+      <!-- form 1b -->
+<fieldset>
+  <legend>Familiegegevens</legend>
+  <label for="Getrouwd">Was de overledene getrouwd of had de overledene een geregistreerd partner op het moment van overlijden?</label>
+  <input type="radio" id="welGetrouwd-nojs" name="Getrouwd" value="Ja"> Ja
+  <input type="radio" id="nietGetrouwd-nojs" name="Getrouwd" value="nee"> Nee
+  <br>
+ 
+    <label for="partnerschap">Hadden de overledene en diens echtgenoot of geregistreerd partner huwelijkse of partner schapsvoorwaarden laten vastleggen in een notariële akte?</label>
+      <input type="radio" id="welGeregristeerdPartnerschap-nojs" name="GeregristeerdPartnerschap" value="Ja" data-should-be-required> Ja. Stuur een kopie van de akte mee met de aangifte.
+      <input type="radio" id="geenGeregristeerdPartnerschap-nojs" name="GeregristeerdPartnerschap" value="nee" data-should-be-required> Nee
+    
+
+    <label for="verrekenbeding">Hadden de overledene en diens partner een finaal verrekenbeding?</label>
+   
+      <input type="radio" id="welVerrekenbeding-nojs" name="verrekenbeding" value="Ja" data-should-be-required> Ja
+      <input type="radio" id="nietVerrekenbeding-nojs" name="verrekenbeding" value="nee" data-should-be-required> Nee
+ 
+    <br><br>
+
+    <label for="datumHuwlijk">Datum huwelijkse of partnerschapsvoorwaarden</label>
+    <input type="date" id="datumHuwlijk-nojs" name="datumHuwlijk" data-should-be-required><br><br>
+  
+</fieldset>
+
+
+      <!-- form 1c -->
+      <fieldset>
+        <legend>Kinderen</legend>
+        <label for="kinderen">Had de overledene kinderen? </label>
+        <input type="radio" id="welKinderen-nojs" name="kinderen" value="Ja"> Ja
+        <input type="radio" id="geenKinderen-nojs" name="kinderen" value="nee"> Nee. Ga verder met vraag 1d.
+        <br><br>
+    
+          <label for="kindOverleden">Is 1 van deze kinderen eerder overleden dan de overledene? </label>
+ 
+            <input type="radio" id="welKindOverleden-nojs" name="kindOverleden" value="Ja" data-should-be-required> Ja
+            <input type="radio" id="geenKindOverleden-nojs" name="kindOverleden" value="nee" data-should-be-required> Nee. ga verder met vraag 1d.
+
+          <br><br>
+       
+            <label for="zelfKinderen">Had dit overleden kind zelf kinderen? </label>
+          
+              <input type="radio" id="welZelfKinderen-nojs" name="zelfKinderen" value="Ja" data-should-be-required> Ja
+              <input type="radio" id="geenZelfKinderen-nojs" name="zelfKinderen" value="nee" data-should-be-required> Nee
+         
+        
+
+      </fieldset>
+      <!-- form 1d -->
+      <fieldset>
+        <legend>Testament</legend>
+        <label for="testament">Had de overledene een testament? </label>
+        <input type="radio" id="welTestament-nojs" name="testament" value="Ja"> Ja. Vul de gegevens van de notaris die het
+        testament heeft opgemaakt en de datum van het testament.
+        <input type="radio" id="geenTestament-nojs" name="testament" value="nee"> Nee. Ga verder met vraag 2.
+        <br><br>
+      
+      
+          <label for="protocolnummer">Protocolnummer notaris </label>
+         
+            <input type="number" id="protocolnummer-nojs" name="protocolnummer" placeholder="Protocolnummer" required pattern="\d{6}" data-should-be-required>
+          
+          <br><br>
+      
+          <label for="notarisVoorletter">Voorletter(s) van notaris </label>
+       
+            <input type="text" id="notarisVoorletter-nojs" name="notarisVoorletter" placeholder="Voorletter" data-should-be-required>
+    
+      
+          <label for="notarisTussenvoegsel">Tussenvoegsel(s) notaris </label>
+          <input type="text" id="notarisTussenvoegsel-nojs" name="notarisTussenvoegsel" placeholder="Tussenvoegsel">
+      
+          <label for="notarisAchternaam">Achternaam notaris </label>
+      
+            <input type="text" id="notarisAchternaam-nojs" name="notarisAchternaam" placeholder="Achternaam" data-should-be-required>
+       
+          <br><br>
+      
+          <label for="notarisPlaats">Vestigingsplaats </label>
+        
+            <input type="text" id="notarisPlaats-nojs" name="notarisPlaats" placeholder="Vestigingsplaats" data-should-be-required>
+      
+          <br><br>
+      
+          <label for="testamentDatum">Datum van het testament of laatste wijziging </label>
+      
+            <input type="date" id="testamentDatum-nojs" name="testamentDatum" placeholder="Datum van het testament" data-should-be-required>
+  
+   
+      </fieldset>
+    </fieldset>
+  </div>
+
+  <button>Ga verder</button>
+</form>
+</div>
+</div>
+
+
+<div class="js-content">
+<h1>Welkom bij de Vragenlijst</h1>
+<h3>vul hier de gegevens in van de overledene</h3>
+<form action="vragenlijst2.html">
+
+  <!-- form 1a -->
+  <div class="container">
+    <fieldset>
+      <legend>1 Gegevens van de overledene</legend>
+      <small>Vul hier de gegevens van de overledene in.</small>
+      <br><br>
+      <fieldset>
+      <legend>Persoonsgegevens</legend>
+        <label for="Voorletter">Voorletter(s) 
+        </label>
+        <input type="text" id="Voorletter" name="Voorletter" placeholder="Voorletter"  required>
+
+
+        <label for="Tussenvoegsel">Tussenvoegsel</label>
+        <input type="text" id="Tussenvoegsel" name="Tussenvoegsel" placeholder="Tussenvoegsel">
+
+
+        <label for="Achternaam">Achternaam </label>
+        <input type="text" id="Achternaam" name="Achternaam" placeholder="Achternaam" required>
+        <br><br>
+
+        <label for="Burgerservicenummer">Burgerservicenummer overledene </label>
+        <input type="text" id="Burgerservicenummer" name="Burgerservicenummer" placeholder="12345678" required pattern="\d{8,9}"> <br>
+        <small>Het burgerservicenummer moet 8 of 9 cijfers bevatten.</small>
+
+
+        <label for="Overlijdensdatum">Overlijdensdatum </label>
+        <input type="date" id="Overlijdensdatum" name="Overlijdensdatum" required><br><br>
+
+      </fieldset> 
+
+      <!-- form 1b -->
+<fieldset>
+  <legend>Familiegegevens</legend>
+  <label for="Getrouwd">Was de overledene getrouwd of had de overledene een geregistreerd partner op het moment van overlijden?</label>
+  <input type="radio" id="welGetrouwd" name="Getrouwd" value="Ja"> Ja
+  <input type="radio" id="nietGetrouwd" name="Getrouwd" value="nee"> Nee
+  <br>
+  <div id="hiddenElementGetrouwd" style="display: none;">
+    <label for="partnerschap">Hadden de overledene en diens echtgenoot of geregistreerd partner huwelijkse of partner schapsvoorwaarden laten vastleggen in een notariële akte?</label>
+    <div data-requireMe="partnerschap">
+      <input type="radio" id="welGeregristeerdPartnerschap" name="GeregristeerdPartnerschap" value="Ja" data-should-be-required> Ja. Stuur een kopie van de akte mee met de aangifte.
+      <input type="radio" id="geenGeregristeerdPartnerschap" name="GeregristeerdPartnerschap" value="nee" data-should-be-required> Nee
+    </div>
+
+    <label for="verrekenbeding">Hadden de overledene en diens partner een finaal verrekenbeding?</label>
+    <div data-requireMe="verrekenbeding">
+      <input type="radio" id="welVerrekenbeding" name="verrekenbeding" value="Ja" data-should-be-required> Ja
+      <input type="radio" id="nietVerrekenbeding" name="verrekenbeding" value="nee" data-should-be-required> Nee
+    </div>
+    <br><br>
+
+    <label for="datumHuwlijk">Datum huwelijkse of partnerschapsvoorwaarden</label>
+    <input type="date" id="datumHuwlijk" name="datumHuwlijk" data-should-be-required><br><br>
+  </div>
+</fieldset>
+
+
+      <!-- form 1c -->
+      <fieldset>
+        <legend>Kinderen</legend>
+        <label for="kinderen">Had de overledene kinderen? </label>
+        <input type="radio" id="welKinderen" name="kinderen" value="Ja"> Ja
+        <input type="radio" id="geenKinderen" name="kinderen" value="nee"> Nee. Ga verder met vraag 1d.
+        <br><br>
+        <div id="hiddenElementKinderen" style="display: none;">
+          <label for="kindOverleden">Is 1 van deze kinderen eerder overleden dan de overledene? </label>
+          <div data-requireMe="kindOverleden">
+            <input type="radio" id="welKindOverleden" name="kindOverleden" value="Ja" data-should-be-required> Ja
+            <input type="radio" id="geenKindOverleden" name="kindOverleden" value="nee" data-should-be-required> Nee. ga verder met vraag 1d.
+          </div>
+          <br><br>
+          <div id="hiddenElementKindOverleden" style="display: none;">
+            <label for="zelfKinderen">Had dit overleden kind zelf kinderen? </label>
+            <div data-requireMe="zelfKinderen">
+              <input type="radio" id="welZelfKinderen" name="zelfKinderen" value="Ja" data-should-be-required> Ja
+              <input type="radio" id="geenZelfKinderen" name="zelfKinderen" value="nee" data-should-be-required> Nee
+            </div>
+          </div>
+        </div>
+
+      </fieldset>
+      <!-- form 1d -->
+      <fieldset>
+        <legend>Testament</legend>
+        <label for="testament">Had de overledene een testament? </label>
+        <input type="radio" id="welTestament" name="testament" value="Ja"> Ja. Vul de gegevens van de notaris die het
+        testament heeft opgemaakt en de datum van het testament.
+        <input type="radio" id="geenTestament" name="testament" value="nee"> Nee. Ga verder met vraag 2.
+        <br><br>
+      
+        <div id="hiddenElementTestament" style="display: none;">
+          <label for="protocolnummer">Protocolnummer notaris </label>
+          <div data-requireMe="protocolnummer">
+            <input type="number" id="protocolnummer" name="protocolnummer" placeholder="Protocolnummer" required pattern="\d{6}" data-should-be-required>
+          </div>
+          <br><br>
+      
+          <label for="notarisVoorletter">Voorletter(s) van notaris </label>
+          <div data-requireMe="notarisVoorletter">
+            <input type="text" id="notarisVoorletter" name="notarisVoorletter" placeholder="Voorletter" data-should-be-required>
+          </div>
+      
+          <label for="notarisTussenvoegsel">Tussenvoegsel(s) notaris </label>
+          <input type="text" id="notarisTussenvoegsel" name="notarisTussenvoegsel" placeholder="Tussenvoegsel">
+      
+          <label for="notarisAchternaam">Achternaam notaris </label>
+          <div data-requireMe="notarisAchternaam">
+            <input type="text" id="notarisAchternaam" name="notarisAchternaam" placeholder="Achternaam" data-should-be-required>
+          </div>
+          <br><br>
+      
+          <label for="notarisPlaats">Vestigingsplaats </label>
+          <div data-requireMe="notarisPlaats">
+            <input type="text" id="notarisPlaats" name="notarisPlaats" placeholder="Vestigingsplaats" data-should-be-required>
+          </div>
+          <br><br>
+      
+          <label for="testamentDatum">Datum van het testament of laatste wijziging </label>
+          <div data-requireMe="testamentDatum">
+            <input type="date" id="testamentDatum" name="testamentDatum" placeholder="Datum van het testament" data-should-be-required>
+          </div>
+        </div>
+      </fieldset>
+    </fieldset>
+  </div>
+
+  <button>Ga verder</button>
+</form>
+
+</div>
+</div>
+
+</body>
+
+</html>
+ 

@@ -22,7 +22,7 @@
 </header>
 <body2>
 
- <form>
+ <form action="vragenlijst3.html">
  <!-- form 2 -->
  <div class="container">
     <fieldset>
@@ -41,16 +41,15 @@
 
         <label for="burgerservicenummerGemachtige">Burgerservicenummer/ RSIN gemachtigde</label>
         <input type="number" id="burgerservicenummerGemachtige" name="burgerservicenummerGemachtige"
-               placeholder="Burgerservicenummer/ RSIN gemachtigde" required pattern="\d{6,8}" >
+               placeholder="Burgerservicenummer/ RSIN gemachtigde"  pattern="\d{8,9}" data-should-be-required>
         <br><br>
 
         <label for="Beconnummer">Beconnummer adviseur </label>
-        <input type="number" id="beconnummer" name="beconnummer" placeholder="Beconnummer adviseur"required pattern="\d{6}">
+        <input type="number" id="beconnummer" name="beconnummer" placeholder="Beconnummer adviseur" pattern="\d{6}" data-should-be-required>
         <br><br>
 
         <label for="protocolnummer">Protocolnummer notaris </label>
-        <input type="text" id="protocolnummer" name="protocolnummer" placeholder="Protocolnummer"> Lees ook de
-        toelichting bij vraag 1d
+        <input type="text" id="protocolnummer" name="protocolnummer" placeholder="Protocolnummer" data-should-be-required>
         <br><br>
       </fieldset>
 
@@ -59,42 +58,42 @@
         <legend>2b Naam en adres van de gemachtigde</legend>
 
         <label for="Naam">Voorletter(s), tussen- voegsel(s) en achternaam gemachtigde </label>
-        <input type="text" id="VoorletterGemachtigde" name="VoorletterGemachtigde" placeholder="Voorletter">
+        <input type="text" id="VoorletterGemachtigde" name="VoorletterGemachtigde" placeholder="Voorletter" data-should-be-required>
         <input type="text" id="TussenvoegselGemachtigde" name="TussenvoegselGemachtigde" placeholder="Tussenvoegsel">
-        <input type="text" id="AchternaamGemachtigde" name="AchternaamGemachtigde" placeholder="Achternaam"> <br><br>
+        <input type="text" id="AchternaamGemachtigde" name="AchternaamGemachtigde" placeholder="Achternaam" data-should-be-required> <br><br>
 
         <label for="instellingsNaam">Naam instelling (bijvoorbeeld een notariskantoor) </label>
-        <input type="text" id="instellingsNaam" name="instellingsNaam" placeholder="Naam instelling"><br><br><br>
+        <input type="text" id="instellingsNaam" name="instellingsNaam" placeholder="Naam instelling" data-should-be-required><br><br><br>
 
         <tekst>Adres in Nederland</tekst>
         <br><br>
 
         <label for="straat">Straatnaam en huisnummer </label>
-        <input type="text" id="straat" name="straat" placeholder="Straatnaam">
-        <input type="text" id="huisnummer" name="huisnummer" placeholder="Huisnummer">
+        <input type="text" id="straat" name="straat" placeholder="Straatnaam" data-should-be-required>
+        <input type="text" id="huisnummer" name="huisnummer" placeholder="Huisnummer" data-should-be-required>
         <br><br>
 
         <label for="postcode">Postcode en plaats </label>
-        <input type="text" id="postcode" name="postcode" placeholder="Postcode">
-        <input type="text" id="plaats" name="plaats" placeholder="Plaats">
+        <input type="text" id="postcode" name="postcode" placeholder="Postcode" data-should-be-required>
+        <input type="text" id="plaats" name="plaats" placeholder="Plaats" data-should-be-required>
         <br><br>
 
         <label for="landcode">Landcode </label>
-        <input type="number" id="landcode" name="landcode" placeholder="Landcode">
+        <input type="number" id="landcode" name="landcode" placeholder="Landcode" data-should-be-required>
         <br><br>
 
         <label for="telefoonnummer">Telefoonnummer </label>
-        <input type="number" id="telefoonnummer" name="telefoonnummer" placeholder="Telefoonnummer">
+        <input type="number" id="telefoonnummer" name="telefoonnummer" placeholder="Telefoonnummer" data-should-be-required>
         <br><br>
 
         <label for="email">E-mailadres </label>
-        <input type="email" id="email" name="email" placeholder="E-mailadres">
+        <input type="email" id="email" name="email" placeholder="E-mailadres" data-should-be-required>
         <br><br>
 
       </fieldset>
   </div>
 
-  <a href="vragenlijst3.html">Ga verder</a>
+  <button>Ga verder</button>
 </form>
 </body2>
 </html>

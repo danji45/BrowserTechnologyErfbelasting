@@ -98,14 +98,12 @@ header {
 
 .headerStyling {
   width: 30%;
-  /* Stel de breedte in naar wens */
   max-width: 1200px;
-  /* Stel de maximale breedte in */
   margin: 0px auto;
-  /* Maakt de container in het midden */
   padding: 40px;
+  overflow: hidden;
   background-color: var(--yellow-dark);
-  /* Lichte achtergrondkleur voor de container */
+
 }
 
 body {
@@ -293,7 +291,7 @@ button:hover {
 
 h1 {
   color: var(--blue-dark);
-  font-size: 2em;
+  font-size: clamp(1em, 4vw, 2.5em);
   text-align: center;
 }
 
@@ -337,9 +335,29 @@ h5 {
   text-align: center;
 }
 
-.container fieldset:nth-child(1) {
+.container fieldset:nth-of-type(){
   border: none;
 }
+
+/* Styling voor valide en invalide velden */
+input.valid {
+  border: 2px solid var(--green-dark) !important;
+  background-color: rgba(0, 255, 0, 0.05);
+}
+
+input.invalid {
+  border: 2px solid var(--red-dark) !important;
+  background-color: rgba(255, 0, 0, 0.05);
+}
+
+
+/* Stijl voor focus op velden */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
 
 
 /* a {
@@ -365,3 +383,14 @@ h5 {
 /* a:hover {
   background-color: #3a76d8;
 } */
+
+
+/* Standaard (als JS uit staat) */
+.no-js-content { display: block; }
+.js-content { display: none; }
+
+/* Als JS aan staat */
+.js .no-js-content { display: none; }
+.js .js-content { display: block; }
+
+/* Overige stijlen hier */
